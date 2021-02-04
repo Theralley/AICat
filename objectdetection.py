@@ -71,7 +71,12 @@ colors = np.random.uniform(0,255,size=(len(classes),3))
 #loading image
 font = cv2.FONT_HERSHEY_PLAIN
 frame_id = 0
-cap = cv2.VideoCapture(imagename)
+
+if (imagename == '0'):
+    cap = cv2.VideoCapture(0)
+
+if(imagename != '0'):
+    cap = cv2.VideoCapture(imagename)
 
 #FRAME TO START ON
 
